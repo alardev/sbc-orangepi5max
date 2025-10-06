@@ -22,8 +22,7 @@ jobs:
       packages: write
       pull-requests: read
     runs-on:
-      - self-hosted
-      - pkgs
+      - ubuntu-24.04-arm
     if: (!startsWith(github.head_ref, 'renovate/') && !startsWith(github.head_ref, 'dependabot/'))
     services:
       buildkitd:
